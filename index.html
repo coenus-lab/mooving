@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseFit Gym</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <h1>PulseFit</h1>
+        <ul>
+          <li><a href="#memberships">Memberships</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#join">Join</a></li>
+          <li><a href="#book">Book Class</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <p class="tag">Train smarter. Feel stronger.</p>
+        <h2>Your gym, memberships, and class schedule in one place.</h2>
+        <p>Pick a plan, register online, and book classes instantly.</p>
+        <a class="btn" href="#join">Start Membership</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="memberships" class="section">
+        <h3>Membership Plans</h3>
+        <div class="cards">
+          <article class="card"><h4>Starter</h4><p class="price">$39 / month</p></article>
+          <article class="card featured"><h4>Performance</h4><p class="price">$69 / month</p></article>
+          <article class="card"><h4>Elite</h4><p class="price">$109 / month</p></article>
+        </div>
+      </section>
+
+      <section id="schedule" class="section alt">
+        <h3>Live Class Availability</h3>
+        <div id="classes" class="schedule-grid"></div>
+      </section>
+
+      <section id="join" class="section cta">
+        <h3>Create Membership</h3>
+        <form id="membership-form" class="form-grid">
+          <label>Name <input name="name" required /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Plan
+            <select name="plan" required>
+              <option value="Starter">Starter</option>
+              <option value="Performance">Performance</option>
+              <option value="Elite">Elite</option>
+            </select>
+          </label>
+          <label>Goal
+            <select name="goal">
+              <option>Build strength</option>
+              <option>Lose weight</option>
+              <option>Improve mobility</option>
+              <option>General fitness</option>
+            </select>
+          </label>
+          <button type="submit">Activate Membership</button>
+        </form>
+        <p id="membership-msg" class="message"></p>
+      </section>
+
+      <section id="book" class="section">
+        <h3>Book a Class</h3>
+        <form id="booking-form" class="form-grid">
+          <label>Class
+            <select name="classId" id="class-select" required></select>
+          </label>
+          <label>Name <input name="memberName" required /></label>
+          <label>Email <input type="email" name="memberEmail" required /></label>
+          <button type="submit">Book Class</button>
+        </form>
+        <p id="booking-msg" class="message"></p>
+      </section>
+    </main>
+
+    <footer><p>© 2026 PulseFit Gym · Open daily 5:30–22:00</p></footer>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
